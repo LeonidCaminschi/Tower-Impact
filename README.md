@@ -1,7 +1,7 @@
 # FDJ Team Nr 9
-Caminschi Leonid FAF-211
-Guzun Gregorie FAF-213
-Braguta Adelia FAF-213
+* Caminschi Leonid FAF-211
+* Guzun Gregorie FAF-213
+* Braguta Adelia FAF-213
 
 ## 27/10/2024
 * Determined best engine to do the project
