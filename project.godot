@@ -14,3 +14,15 @@ config/name="Tower Impact"
 run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=3584
+window/size/viewport_height=2048
+window/size/window_width_override=1193
+window/size/window_height_override=682
+window/stretch/mode="viewport"
+
+[rendering]
+
+textures/light_projectors/filter=0

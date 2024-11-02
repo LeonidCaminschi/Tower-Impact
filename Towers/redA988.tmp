@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://rb8e5jt3f0aj"]
+
+[ext_resource type="Script" path="res://Towers/red_bullet.gd" id="1_7442f"]
+[ext_resource type="Texture2D" uid="uid://5xtu7c70cmfe" path="res://assets/TD Tiles/towerDefense_tile251.png" id="1_n02mx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_872no"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tj1w6"]
+radius = 14.0
+height = 35.0
+
+[node name="Red Bullet" type="CharacterBody2D"]
+script = ExtResource("1_7442f")
+
+[node name="TowerDefenseTile251" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_n02mx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_872no")
+
+[node name="Area2D" type="Area2D" parent="."]
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_tj1w6")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
