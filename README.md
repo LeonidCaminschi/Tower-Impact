@@ -3,7 +3,7 @@
 * Guzun Gregorie FAF-213
 * Braguta Adelia FAF-213
 
-## 27/10/2024
+## 27/10/2024 - Week 1
 * Determined best engine to do the project
 * Initialization of project
 * Experimentation in the new engine
