@@ -17,6 +17,13 @@
 * Implemented Heat seeking missile from tower which attacks a mob also rotates
 * Fixed bugs regarding multiple towers shooting one Mob
 
+## 10/11/2024 - Week 3
+* Implemented basic GUI for tower selection
+* Implemented drag and drop functionality for towers
+* Implemented cancaling of drag and drop
+* Extended the map 
+* Added Clickable upgrade panel for each tower
+
 ## Bibliography
 * **[Online Video Course Tutorial](https://www.youtube.com/watch?v=tR_8Ch9aZ_Q&list=PLPuNhh82sRgk7S85quXb2_XI8b_jbmruB)**.
 * **[Free Use Tower Defense Assets](https://www.kenney.nl/assets/tower-defense-top-down)**.
