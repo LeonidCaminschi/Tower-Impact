@@ -18,6 +18,7 @@ func _process(delta):
 	if is_instance_valid(curr):
 		self.look_at(curr.global_position)
 		if timer.is_stopped():
+			Shoot()
 			timer.start()
 	else:
 		for i in get_node("BulletContainer").get_child_count():
