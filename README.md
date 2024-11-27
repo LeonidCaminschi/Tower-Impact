@@ -31,6 +31,11 @@
 * Added Enemies Health Bar
 * Implemented Main Menu
 
+## 27/11/2024 - Week 5
+* Implemented Tower ovelapping
+* Implemented Working Gold and Health
+* Fixed some Shooting and Tower related bugs
+
 ## Bibliography
 * **[Online Video Course Tutorial](https://www.youtube.com/watch?v=tR_8Ch9aZ_Q&list=PLPuNhh82sRgk7S85quXb2_XI8b_jbmruB)**.
 * **[Free Use Tower Defense Assets](https://www.kenney.nl/assets/tower-defense-top-down)**.
