@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://cnep78dfgq70x"]
+[gd_scene load_steps=20 format=3 uid="uid://cnep78dfgq70x"]
 
 [ext_resource type="Script" path="res://Towers/red_bullet_tower.gd" id="1_clecn"]
 [ext_resource type="Texture2D" uid="uid://copkfnomh7btv" path="res://assets/TD Tiles/towerDefense_tile250.png" id="2_x6swj"]
 [ext_resource type="Texture2D" uid="uid://cjn88slntn43v" path="res://assets/TD Tiles/towerDefense_tile110.png" id="3_5k5c3"]
+[ext_resource type="Texture2D" uid="uid://pn0hprlo6nb7" path="res://assets/towers/Asset-1.png" id="3_boh43"]
 [ext_resource type="Texture2D" uid="uid://bmu7owqb6upq6" path="res://assets/TD Tiles/towerDefense_tile297.png" id="4_pfhqf"]
 [ext_resource type="Texture2D" uid="uid://i8s2huobanub" path="res://assets/TD Tiles/towerDefense_tile296.png" id="5_ipb2c"]
 
@@ -118,9 +119,15 @@ shape = SubResource("RectangleShape2D_47pxa")
 position = Vector2(64, 0)
 
 [node name="TowerDefenseTile250" type="Sprite2D" parent="."]
+visible = false
 rotation = 1.5708
 scale = Vector2(2, 2)
 texture = ExtResource("2_x6swj")
+
+[node name="Asset-1" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, 1.90735e-06)
+scale = Vector2(0.312378, 0.312378)
+texture = ExtResource("3_boh43")
 
 [node name="Tower" type="Area2D" parent="."]
 
