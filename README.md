@@ -36,6 +36,14 @@
 * Implemented Working Gold and Health
 * Fixed some Shooting and Tower related bugs
 
+## 12/12/2024 - Week 7
+* Redesigned the level
+* Added new Towers
+* Redesigned the Towers
+* Updated the invalid zone where you cant place towers
+* Updated the Tower panel
+
 ## Bibliography
 * **[Online Video Course Tutorial](https://www.youtube.com/watch?v=tR_8Ch9aZ_Q&list=PLPuNhh82sRgk7S85quXb2_XI8b_jbmruB)**.
 * **[Free Use Tower Defense Assets](https://www.kenney.nl/assets/tower-defense-top-down)**.
+* **[Stolen Tower Models](https://www.instagram.com/ekasetyanugraha/)**
