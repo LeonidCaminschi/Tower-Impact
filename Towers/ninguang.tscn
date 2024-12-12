@@ -1,10 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://cnep78dfgq70x"]
+[gd_scene load_steps=19 format=3 uid="uid://dbsm0kp2mrdvv"]
 
-[ext_resource type="Script" path="res://Towers/red_bullet_tower.gd" id="1_clecn"]
-[ext_resource type="Texture2D" uid="uid://cjn88slntn43v" path="res://assets/TD Tiles/towerDefense_tile110.png" id="3_5k5c3"]
-[ext_resource type="Texture2D" uid="uid://pn0hprlo6nb7" path="res://assets/towers/Asset-1.png" id="3_boh43"]
-[ext_resource type="Texture2D" uid="uid://bmu7owqb6upq6" path="res://assets/TD Tiles/towerDefense_tile297.png" id="4_pfhqf"]
-[ext_resource type="Texture2D" uid="uid://i8s2huobanub" path="res://assets/TD Tiles/towerDefense_tile296.png" id="5_ipb2c"]
+[ext_resource type="Script" path="res://Towers/red_bullet_tower.gd" id="1_3jhrg"]
+[ext_resource type="Texture2D" uid="uid://su4bobq2rh2h" path="res://assets/towers/Asset-3.png" id="2_b16d1"]
+[ext_resource type="Texture2D" uid="uid://cjn88slntn43v" path="res://assets/TD Tiles/towerDefense_tile110.png" id="3_ifdbr"]
+[ext_resource type="Texture2D" uid="uid://bmu7owqb6upq6" path="res://assets/TD Tiles/towerDefense_tile297.png" id="4_1de0p"]
+[ext_resource type="Texture2D" uid="uid://i8s2huobanub" path="res://assets/TD Tiles/towerDefense_tile296.png" id="5_d8qnr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47pxa"]
 size = Vector2(102, 95)
@@ -13,21 +13,6 @@ size = Vector2(102, 95)
 radius = 400.0
 
 [sub_resource type="GDScript" id="GDScript_60d74"]
-script/source = "extends CollisionShape2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	hide()
-
-
-func _draw():
-	var cen = Vector2(0, 0)
-	var rad = get_parent().get_parent().range
-	var col = Color(0, 255, 0, 0.3)
-	draw_circle(cen, rad, col)
-	
-"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7bu1"]
 size = Vector2(128, 128)
@@ -108,7 +93,7 @@ func _process(delta):
 
 [node name="RedBulletTower" type="StaticBody2D"]
 input_pickable = true
-script = ExtResource("1_clecn")
+script = ExtResource("1_3jhrg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-11, -0.5)
@@ -120,7 +105,7 @@ position = Vector2(64, 0)
 [node name="Asset-1" type="Sprite2D" parent="."]
 position = Vector2(-1.90735e-06, 1.90735e-06)
 scale = Vector2(0.312378, 0.312378)
-texture = ExtResource("3_boh43")
+texture = ExtResource("2_b16d1")
 
 [node name="Tower" type="Area2D" parent="."]
 
@@ -185,7 +170,7 @@ horizontal_alignment = 1
 
 [node name="TowerDefenseTile110" type="Sprite2D" parent="Upgrade/Upgrade/HBoxContainer/Range"]
 position = Vector2(63, 63)
-texture = ExtResource("3_5k5c3")
+texture = ExtResource("3_ifdbr")
 
 [node name="AttackSpeed" type="Button" parent="Upgrade/Upgrade/HBoxContainer"]
 custom_minimum_size = Vector2(125, 125)
@@ -206,7 +191,7 @@ horizontal_alignment = 1
 
 [node name="TowerDefenseTile297" type="Sprite2D" parent="Upgrade/Upgrade/HBoxContainer/AttackSpeed"]
 position = Vector2(63, 63)
-texture = ExtResource("4_pfhqf")
+texture = ExtResource("4_1de0p")
 
 [node name="Power" type="Button" parent="Upgrade/Upgrade/HBoxContainer"]
 custom_minimum_size = Vector2(125, 125)
@@ -227,7 +212,7 @@ horizontal_alignment = 1
 
 [node name="TowerDefenseTile296" type="Sprite2D" parent="Upgrade/Upgrade/HBoxContainer/Power"]
 position = Vector2(63, 63)
-texture = ExtResource("5_ipb2c")
+texture = ExtResource("5_d8qnr")
 
 [node name="ProgressBar" type="ProgressBar" parent="Upgrade"]
 offset_left = -64.0

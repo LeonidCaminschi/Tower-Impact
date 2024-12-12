@@ -16,7 +16,10 @@ var startShooting = false
 func _process(delta):
 	get_node("Upgrade/ProgressBar").global_position = self.position + Vector2(-64, -81)
 	if is_instance_valid(curr):
-		self.look_at(curr.global_position)
+		if self.global_position.x < curr.global_position.x:
+			self.get_child(2).flip_h = false
+		else:
+			self.get_child(2).flip_h = true
 		if timer.is_stopped():
 			Shoot()
 			timer.start()

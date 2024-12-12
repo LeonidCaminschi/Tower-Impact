@@ -1,10 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://cnep78dfgq70x"]
+[gd_scene load_steps=19 format=3 uid="uid://c777x5kqyv3yg"]
 
-[ext_resource type="Script" path="res://Towers/red_bullet_tower.gd" id="1_clecn"]
-[ext_resource type="Texture2D" uid="uid://cjn88slntn43v" path="res://assets/TD Tiles/towerDefense_tile110.png" id="3_5k5c3"]
-[ext_resource type="Texture2D" uid="uid://pn0hprlo6nb7" path="res://assets/towers/Asset-1.png" id="3_boh43"]
-[ext_resource type="Texture2D" uid="uid://bmu7owqb6upq6" path="res://assets/TD Tiles/towerDefense_tile297.png" id="4_pfhqf"]
-[ext_resource type="Texture2D" uid="uid://i8s2huobanub" path="res://assets/TD Tiles/towerDefense_tile296.png" id="5_ipb2c"]
+[ext_resource type="Script" path="res://Towers/red_bullet_tower.gd" id="1_kmai8"]
+[ext_resource type="Texture2D" uid="uid://imc1ehve66tn" path="res://assets/towers/Asset-4.png" id="2_d51mk"]
+[ext_resource type="Texture2D" uid="uid://cjn88slntn43v" path="res://assets/TD Tiles/towerDefense_tile110.png" id="3_0ouvd"]
+[ext_resource type="Texture2D" uid="uid://bmu7owqb6upq6" path="res://assets/TD Tiles/towerDefense_tile297.png" id="4_wjbkj"]
+[ext_resource type="Texture2D" uid="uid://i8s2huobanub" path="res://assets/TD Tiles/towerDefense_tile296.png" id="5_2li6o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47pxa"]
 size = Vector2(102, 95)
@@ -108,7 +108,7 @@ func _process(delta):
 
 [node name="RedBulletTower" type="StaticBody2D"]
 input_pickable = true
-script = ExtResource("1_clecn")
+script = ExtResource("1_kmai8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-11, -0.5)
@@ -120,7 +120,7 @@ position = Vector2(64, 0)
 [node name="Asset-1" type="Sprite2D" parent="."]
 position = Vector2(-1.90735e-06, 1.90735e-06)
 scale = Vector2(0.312378, 0.312378)
-texture = ExtResource("3_boh43")
+texture = ExtResource("2_d51mk")
 
 [node name="Tower" type="Area2D" parent="."]
 
@@ -185,7 +185,7 @@ horizontal_alignment = 1
 
 [node name="TowerDefenseTile110" type="Sprite2D" parent="Upgrade/Upgrade/HBoxContainer/Range"]
 position = Vector2(63, 63)
-texture = ExtResource("3_5k5c3")
+texture = ExtResource("3_0ouvd")
 
 [node name="AttackSpeed" type="Button" parent="Upgrade/Upgrade/HBoxContainer"]
 custom_minimum_size = Vector2(125, 125)
@@ -206,7 +206,7 @@ horizontal_alignment = 1
 
 [node name="TowerDefenseTile297" type="Sprite2D" parent="Upgrade/Upgrade/HBoxContainer/AttackSpeed"]
 position = Vector2(63, 63)
-texture = ExtResource("4_pfhqf")
+texture = ExtResource("4_wjbkj")
 
 [node name="Power" type="Button" parent="Upgrade/Upgrade/HBoxContainer"]
 custom_minimum_size = Vector2(125, 125)
@@ -227,7 +227,7 @@ horizontal_alignment = 1
 
 [node name="TowerDefenseTile296" type="Sprite2D" parent="Upgrade/Upgrade/HBoxContainer/Power"]
 position = Vector2(63, 63)
-texture = ExtResource("5_ipb2c")
+texture = ExtResource("5_2li6o")
 
 [node name="ProgressBar" type="ProgressBar" parent="Upgrade"]
 offset_left = -64.0
