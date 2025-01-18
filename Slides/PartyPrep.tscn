@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjsdypyg6iupi"]
+
+[ext_resource type="Script" path="res://Slides/available_towers.gd" id="1_sbpas"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ku7q"]
+bg_color = Color(0.585062, 0.585062, 0.585062, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe4l8"]
+bg_color = Color(0.289613, 0.630349, 0.648485, 1)
+corner_radius_top_left = 150
+corner_radius_top_right = 150
+corner_radius_bottom_right = 150
+corner_radius_bottom_left = 150
+
+[sub_resource type="GDScript" id="GDScript_kp1dg"]
+script/source = "extends Button
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Slides/Map.tscn\")
+"
+
+[sub_resource type="GDScript" id="GDScript_cis0r"]
+script/source = "extends Button
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/game.tscn\")
+"
+
+[node name="PartyPrep" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 3584.0
+offset_bottom = 2048.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5ku7q")
+
+[node name="AvailableTowers" type="HBoxContainer" parent="Label"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_sbpas")
+
+[node name="BackMap" type="Button" parent="Label"]
+offset_left = 64.0
+offset_top = 1792.0
+offset_right = 256.0
+offset_bottom = 1984.0
+theme_override_font_sizes/font_size = 125
+theme_override_styles/normal = SubResource("StyleBoxFlat_qe4l8")
+text = "<"
+script = SubResource("GDScript_kp1dg")
+
+[node name="BackMap2" type="Button" parent="Label"]
+offset_left = 2944.0
+offset_top = 1792.0
+offset_right = 3505.0
+offset_bottom = 1984.0
+theme_override_font_sizes/font_size = 125
+theme_override_styles/normal = SubResource("StyleBoxFlat_qe4l8")
+text = "Ready"
+script = SubResource("GDScript_cis0r")
+
+[connection signal="pressed" from="Label/BackMap" to="Label/BackMap" method="_on_pressed"]
+[connection signal="pressed" from="Label/BackMap2" to="Label/BackMap2" method="_on_pressed"]

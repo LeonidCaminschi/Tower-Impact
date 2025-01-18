@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjl8t1jupcphr"]
+
+[ext_resource type="Texture2D" uid="uid://qoj0g5fnp415" path="res://assets/Designer (1).jpeg" id="1_ehxx2"]
+[ext_resource type="Script" path="res://Slides/stage_1.gd" id="2_3ch6v"]
+[ext_resource type="Script" path="res://Slides/back_main.gd" id="3_ik1rj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7da1v"]
+bg_color = Color(0.6, 0.12549, 0.6, 0.827451)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_recar"]
+bg_color = Color(0.289613, 0.630349, 0.648485, 1)
+corner_radius_top_left = 150
+corner_radius_top_right = 150
+corner_radius_bottom_right = 150
+corner_radius_bottom_left = 150
+
+[node name="Map" type="Node2D"]
+
+[node name="Designer(1)" type="Sprite2D" parent="."]
+position = Vector2(1792, 1024)
+scale = Vector2(3.5, 2)
+texture = ExtResource("1_ehxx2")
+
+[node name="Stage1" type="Button" parent="."]
+offset_left = 1088.0
+offset_top = 1792.0
+offset_right = 1280.0
+offset_bottom = 1984.0
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_7da1v")
+text = "1"
+script = ExtResource("2_3ch6v")
+
+[node name="BackMain" type="Button" parent="."]
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 256.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 125
+theme_override_styles/normal = SubResource("StyleBoxFlat_recar")
+text = "<"
+script = ExtResource("3_ik1rj")
+
+[connection signal="pressed" from="Stage1" to="Stage1" method="_on_pressed"]
+[connection signal="pressed" from="BackMain" to="BackMain" method="_on_pressed"]

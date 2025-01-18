@@ -1,0 +1,124 @@
+[gd_scene load_steps=12 format=3 uid="uid://dbcdymi67mcqx"]
+
+[ext_resource type="Texture2D" uid="uid://ju7vms71mgxb" path="res://assets/shop.jpg" id="1_4qa6y"]
+[ext_resource type="Script" path="res://Slides/back_main.gd" id="2_g0qxr"]
+[ext_resource type="Texture2D" uid="uid://dt87gq26j7ima" path="res://assets/banner1.jpg" id="3_68smy"]
+[ext_resource type="Texture2D" uid="uid://dak8emb7fl3q0" path="res://assets/money.png" id="4_nnqyw"]
+[ext_resource type="Script" path="res://Slides/singulite.gd" id="5_bkbhu"]
+[ext_resource type="Script" path="res://Slides/1x_pull.gd" id="5_m8q57"]
+[ext_resource type="Script" path="res://Slides/10x_pull.gd" id="6_g24te"]
+[ext_resource type="Script" path="res://Slides/shards.gd" id="6_h0vwp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78fio"]
+bg_color = Color(0.289613, 0.630349, 0.648485, 1)
+corner_radius_top_left = 150
+corner_radius_top_right = 150
+corner_radius_bottom_right = 150
+corner_radius_bottom_left = 150
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qpc13"]
+bg_color = Color(0.411077, 0.612961, 0.854765, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_doy11"]
+bg_color = Color(0.411077, 0.612961, 0.854765, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="Shop" type="Node2D"]
+
+[node name="Shop" type="Sprite2D" parent="."]
+position = Vector2(1792, 1024)
+scale = Vector2(2.8, 2.79781)
+texture = ExtResource("1_4qa6y")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 3392.0
+offset_bottom = 565.0
+theme_override_colors/font_color = Color(0.12999, 0.569693, 1, 1)
+theme_override_font_sizes/font_size = 320
+text = "👋≧◉ᴥ◉≦👋"
+horizontal_alignment = 1
+
+[node name="BackMain" type="Button" parent="."]
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 704.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 125
+theme_override_styles/normal = SubResource("StyleBoxFlat_78fio")
+text = "<- Back :("
+script = ExtResource("2_g0qxr")
+
+[node name="Banner1" type="Sprite2D" parent="."]
+position = Vector2(1792, 1216)
+scale = Vector2(2.36667, 2.01704)
+texture = ExtResource("3_68smy")
+
+[node name="1xPull" type="Button" parent="."]
+offset_left = 448.0
+offset_top = 1280.0
+offset_right = 1024.0
+offset_bottom = 1536.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 180
+theme_override_styles/normal = SubResource("StyleBoxFlat_qpc13")
+text = " x1"
+alignment = 0
+script = ExtResource("5_m8q57")
+
+[node name="Money" type="Sprite2D" parent="1xPull"]
+position = Vector2(448, 128)
+scale = Vector2(1.21508, 1.19565)
+texture = ExtResource("4_nnqyw")
+
+[node name="10xPull" type="Button" parent="."]
+offset_left = 448.0
+offset_top = 1600.0
+offset_right = 1024.0
+offset_bottom = 1856.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 180
+theme_override_styles/normal = SubResource("StyleBoxFlat_doy11")
+text = " x10"
+alignment = 0
+script = ExtResource("6_g24te")
+
+[node name="Money" type="Sprite2D" parent="10xPull"]
+position = Vector2(448, 128)
+scale = Vector2(1.21508, 1.19565)
+texture = ExtResource("4_nnqyw")
+
+[node name="Singulite" type="Label" parent="."]
+offset_left = 1088.0
+offset_right = 1829.0
+offset_bottom = 205.0
+theme_override_font_sizes/font_size = 150
+text = "Singulites:
+"
+script = ExtResource("5_bkbhu")
+
+[node name="Shards" type="Label" parent="."]
+offset_left = 2368.0
+offset_right = 3090.0
+offset_bottom = 205.0
+theme_override_font_sizes/font_size = 150
+text = "Shards: "
+script = ExtResource("6_h0vwp")
+
+[node name="RewardContainer" type="VBoxContainer" parent="."]
+offset_left = 128.0
+offset_top = 320.0
+offset_right = 3456.0
+offset_bottom = 1280.0
+
+[connection signal="pressed" from="BackMain" to="BackMain" method="_on_pressed"]
+[connection signal="pressed" from="1xPull" to="1xPull" method="_on_pressed"]
+[connection signal="pressed" from="10xPull" to="10xPull" method="_on_pressed"]

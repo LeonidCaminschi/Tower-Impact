@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjsdypyg6iupi"]
+
+[ext_resource type="Script" path="res://Slides/available_towers.gd" id="1_sbpas"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ku7q"]
+bg_color = Color(0.585062, 0.585062, 0.585062, 1)
+
+[node name="PartyPrep" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 3584.0
+offset_bottom = 2048.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5ku7q")
+
+[node name="AvailableTowers" type="HBoxContainer" parent="Label"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_sbpas")

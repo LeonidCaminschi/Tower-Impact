@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bv6siadcewxvh" path="res://Tiles/TileMap.tscn" id="1_18qoq"]
 [ext_resource type="Script" path="res://scenes/path_spawner.gd" id="2_il1gc"]
-[ext_resource type="PackedScene" uid="uid://bxke85h4hc82q" path="res://ui.tscn" id="4_mf2in"]
+[ext_resource type="PackedScene" uid="uid://bxke85h4hc82q" path="res://Stages/ui.tscn" id="4_mf2in"]
 
 [node name="Game" type="Node2D"]
 

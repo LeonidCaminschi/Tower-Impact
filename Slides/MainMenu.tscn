@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://xkwvhyx1nj3c"]
+
+[ext_resource type="Texture2D" uid="uid://cow2kuq0x8hay" path="res://assets/Designer.jpeg" id="1_umgce"]
+[ext_resource type="Script" path="res://Slides/quit.gd" id="2_ef6ik"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tyxyt"]
+font_size = 128
+font_color = Color(0.191961, 0.704028, 0.61888, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(15, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkgbg"]
+bg_color = Color(0.510682, 0.454551, 0.0602036, 0.545098)
+corner_radius_top_left = 100
+corner_radius_bottom_right = 100
+
+[sub_resource type="GDScript" id="GDScript_2q3ee"]
+script/source = "extends Button
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Slides/Shop.tscn\")
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxgmr"]
+bg_color = Color(0.889535, 0.43284, 0.548088, 0.52549)
+corner_radius_top_left = 100
+corner_radius_bottom_right = 100
+
+[sub_resource type="GDScript" id="GDScript_exwsw"]
+script/source = "extends Button
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Slides/Map.tscn\")
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7uxbr"]
+bg_color = Color(1, 0, 0, 0.52549)
+corner_radius_top_left = 100
+corner_radius_bottom_right = 100
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Designer" type="Sprite2D" parent="."]
+position = Vector2(2048, 1472)
+scale = Vector2(4, 4)
+texture = ExtResource("1_umgce")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 3456.0
+offset_bottom = 1024.0
+theme_override_font_sizes/font_size = 100
+text = "Welcome to the amazing world of Izumo"
+label_settings = SubResource("LabelSettings_tyxyt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 128.0
+offset_top = 1344.0
+offset_right = 3456.0
+offset_bottom = 1584.0
+theme_override_constants/separation = 200
+alignment = 1
+
+[node name="Shop" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(700, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+theme_override_styles/hover = SubResource("StyleBoxFlat_rkgbg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rkgbg")
+text = "Shop"
+script = SubResource("GDScript_2q3ee")
+
+[node name="Story" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(700, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+theme_override_styles/hover = SubResource("StyleBoxFlat_nxgmr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nxgmr")
+text = "Camaign"
+script = SubResource("GDScript_exwsw")
+
+[node name="Quit" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(700, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+theme_override_styles/hover = SubResource("StyleBoxFlat_7uxbr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7uxbr")
+text = "Quit"
+script = ExtResource("2_ef6ik")
+
+[connection signal="pressed" from="HBoxContainer/Shop" to="HBoxContainer/Shop" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/Story" to="HBoxContainer/Story" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/Quit" to="HBoxContainer/Quit" method="_on_pressed"]
