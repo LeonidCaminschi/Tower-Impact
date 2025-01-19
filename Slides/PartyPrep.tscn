@@ -25,7 +25,9 @@ script/source = "extends Button
 
 
 func _on_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://scenes/game.tscn\")
+	print(Gvar.selectedTowers)
+	if(Gvar.selectedTowers.size() == 4):
+		get_tree().change_scene_to_file(\"res://scenes/game.tscn\")
 "
 
 [node name="PartyPrep" type="Node2D"]
@@ -36,11 +38,13 @@ offset_bottom = 2048.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_5ku7q")
 
 [node name="AvailableTowers" type="HBoxContainer" parent="Label"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_sbpas")
 
 [node name="BackMap" type="Button" parent="Label"]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 1792.0
 offset_right = 256.0
@@ -50,7 +54,8 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_qe4l8")
 text = "<"
 script = SubResource("GDScript_kp1dg")
 
-[node name="BackMap2" type="Button" parent="Label"]
+[node name="Ready" type="Button" parent="Label"]
+layout_mode = 0
 offset_left = 2944.0
 offset_top = 1792.0
 offset_right = 3505.0
@@ -61,4 +66,4 @@ text = "Ready"
 script = SubResource("GDScript_cis0r")
 
 [connection signal="pressed" from="Label/BackMap" to="Label/BackMap" method="_on_pressed"]
-[connection signal="pressed" from="Label/BackMap2" to="Label/BackMap2" method="_on_pressed"]
+[connection signal="pressed" from="Label/Ready" to="Label/Ready" method="_on_pressed"]

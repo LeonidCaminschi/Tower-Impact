@@ -1,7 +1,9 @@
 extends Panel
 
 
-@onready var tower = preload("res://Towers/ninguang.tscn")
+var SelectTower = Gvar.towerMapper(Gvar.selectedTowers.keys()[1])
+
+@onready var tower = load(SelectTower)
 var currTile
 
 func _on_gui_input(event: InputEvent) -> void:

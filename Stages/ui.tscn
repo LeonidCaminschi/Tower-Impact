@@ -13,28 +13,37 @@
 [node name="UI" type="CanvasLayer"]
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 2944.0
-offset_right = 3584.0
-offset_bottom = 2048.0
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -633.0
+offset_right = -9.0
+grow_horizontal = 0
+grow_vertical = 2
 
 [node name="FlowContainer" type="FlowContainer" parent="Panel"]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 64.0
-offset_right = 235.0
-offset_bottom = 704.0
+offset_left = 81.0
+offset_top = 14.0
+offset_right = 241.0
+offset_bottom = 684.0
 scale = Vector2(3, 3)
 theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
+vertical = true
 
 [node name="red_tower_panel" parent="Panel/FlowContainer" instance=ExtResource("1_n6xhf")]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 
 [node name="red_tower_panel2" parent="Panel/FlowContainer" instance=ExtResource("2_guvt8")]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 script = ExtResource("3_xhsai")
 
 [node name="red_tower_panel3" parent="Panel/FlowContainer" instance=ExtResource("4_4mtev")]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 script = ExtResource("5_aukhn")
 

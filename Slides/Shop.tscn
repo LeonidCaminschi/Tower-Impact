@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dbcdymi67mcqx"]
+[gd_scene load_steps=13 format=3 uid="uid://dbcdymi67mcqx"]
 
 [ext_resource type="Texture2D" uid="uid://ju7vms71mgxb" path="res://assets/shop.jpg" id="1_4qa6y"]
 [ext_resource type="Script" path="res://Slides/back_main.gd" id="2_g0qxr"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Slides/1x_pull.gd" id="5_m8q57"]
 [ext_resource type="Script" path="res://Slides/10x_pull.gd" id="6_g24te"]
 [ext_resource type="Script" path="res://Slides/shards.gd" id="6_h0vwp"]
+[ext_resource type="Texture2D" uid="uid://dnogjo02c573l" path="res://assets/towers/Asset-5.png" id="9_4y4kq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78fio"]
 bg_color = Color(0.289613, 0.630349, 0.648485, 1)
@@ -113,11 +114,26 @@ theme_override_font_sizes/font_size = 150
 text = "Shards: "
 script = ExtResource("6_h0vwp")
 
-[node name="RewardContainer" type="VBoxContainer" parent="."]
-offset_left = 128.0
-offset_top = 320.0
-offset_right = 3456.0
-offset_bottom = 1280.0
+[node name="RewardContainer" type="FlowContainer" parent="."]
+offset_left = 492.0
+offset_top = 272.0
+offset_right = 1010.0
+offset_bottom = 438.0
+scale = Vector2(5, 5)
+
+[node name="ColorRect" type="ColorRect" parent="RewardContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+color = Color(0.243137, 0.427451, 1, 1)
+
+[node name="Asset-5" type="TextureRect" parent="RewardContainer/ColorRect"]
+layout_mode = 0
+offset_left = 3.725
+offset_right = 516.725
+offset_bottom = 513.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_4y4kq")
 
 [connection signal="pressed" from="BackMain" to="BackMain" method="_on_pressed"]
 [connection signal="pressed" from="1xPull" to="1xPull" method="_on_pressed"]

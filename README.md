@@ -53,6 +53,12 @@
 * Updated links between screens
 * Dynamic update of the User account (curriencies and new towers(anime waifus))
 
+## 19/01/2025
+* Implemented Game Over Screen with posibility of trying again the level or going to the map
+* Updated the Character Selection Screen to only allow to go to the level when you have 4 characters selected
+* Updated the Pull Animation for x1 pull and x10 pull
+* Whenever a new character is gotten through the gatcha mechanic, it's automaticly added to the character selection screen
+
 ## Bibliography
 * **[Online Video Course Tutorial](https://www.youtube.com/watch?v=tR_8Ch9aZ_Q&list=PLPuNhh82sRgk7S85quXb2_XI8b_jbmruB)**.
 * **[Free Use Tower Defense Assets](https://www.kenney.nl/assets/tower-defense-top-down)**.

@@ -1,7 +1,8 @@
 extends Panel
 
+var SelectTower = Gvar.towerMapper(Gvar.selectedTowers.keys()[3])
 
-@onready var tower = preload("res://Towers/miko.tscn")
+@onready var tower = load(SelectTower)
 var currTile
 
 func _on_gui_input(event: InputEvent) -> void:

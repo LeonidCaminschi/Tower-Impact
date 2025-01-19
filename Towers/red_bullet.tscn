@@ -1,20 +1,51 @@
 [gd_scene load_steps=5 format=3 uid="uid://rb8e5jt3f0aj"]
 
-[ext_resource type="Script" path="res://Towers/red_bullet.gd" id="1_7442f"]
-[ext_resource type="Texture2D" uid="uid://5xtu7c70cmfe" path="res://assets/TD Tiles/towerDefense_tile251.png" id="1_n02mx"]
+[ext_resource type="Texture2D" uid="uid://d0b0qq3dvly7m" path="res://assets/TD Tiles/towerDefense_tile272.png" id="1_hamhg"]
+
+[sub_resource type="GDScript" id="GDScript_famlt"]
+script/source = "extends CharacterBody2D
+
+var target
+var Speed = 1000
+var pathName = \"\"
+var bulletDamage
+
+func _physics_process(delta: float) -> void:
+	var pathSpawnerNode = get_tree().get_root().get_node(\"Game/PathSpawner\")
+	
+	for i in pathSpawnerNode.get_child_count():
+		if pathSpawnerNode.get_child(i).name == pathName:
+			target = pathSpawnerNode.get_child(i).get_child(0).get_child(0).global_position
+			
+	if target != null:
+		velocity = global_position.direction_to(target)*Speed
+	
+		look_at(target)
+		
+		move_and_slide()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if \"Soldier A\" in body.name:
+		body.Health -= bulletDamage
+		queue_free()
+"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_872no"]
+radius = 16.0
+height = 32.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tj1w6"]
-radius = 14.0
-height = 35.0
+radius = 16.0
+height = 32.0
 
 [node name="Red Bullet" type="CharacterBody2D"]
-script = ExtResource("1_7442f")
+script = SubResource("GDScript_famlt")
 
 [node name="TowerDefenseTile251" type="Sprite2D" parent="."]
 rotation = 1.5708
-texture = ExtResource("1_n02mx")
+scale = Vector2(2, 2)
+texture = ExtResource("1_hamhg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
@@ -24,6 +55,7 @@ shape = SubResource("CapsuleShape2D_872no")
 rotation = 1.5708
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.5, 1.5)
 shape = SubResource("CapsuleShape2D_tj1w6")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

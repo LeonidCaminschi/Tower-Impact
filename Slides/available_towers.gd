@@ -1,23 +1,25 @@
 extends HBoxContainer
 
-var selectedTowers = {}
 
 # This function will be called when the button is pressed
 func _on_button_pressed(button: Button, tower: String):
 	# Change the background color of the button (panel)
 	if(!button.get_theme_stylebox("normal").bg_color == Color(1,1,1)):
+		if(Gvar.selectedTowers.keys().size() < 4):
+			Gvar.selectedTowers[tower] = null
+		else:
+			return
 		var style = StyleBoxFlat.new()
 		style.bg_color = Color(1,1,1)
 		button.add_theme_stylebox_override("normal", style)
-		if(selectedTowers.keys().size() < 4):
-			selectedTowers[tower] = null
+		
 	else:
 		var style = StyleBoxFlat.new()
-		style.bg_color = Color(0.6,0.6,0.6)
+		style.bg_color = Color(0.3,0.3,0.3)
 		button.add_theme_stylebox_override("normal", style)
-		selectedTowers.erase(tower)
+		Gvar.selectedTowers.erase(tower)
 	
-	print(selectedTowers)
+	print(Gvar.selectedTowers)
 
 func _ready() -> void:
 	for maiden_path in Gvar.maidens:

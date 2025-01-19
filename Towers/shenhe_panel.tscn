@@ -11,8 +11,8 @@ offset_bottom = 40.0
 script = ExtResource("1_thf1u")
 
 [node name="Asset-1" type="Sprite2D" parent="."]
-position = Vector2(36, 31)
-scale = Vector2(0.15, 0.15)
+position = Vector2(80, 72)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_gqy8p")
 
 [node name="TowerDefenseTile275" type="Sprite2D" parent="Asset-1"]

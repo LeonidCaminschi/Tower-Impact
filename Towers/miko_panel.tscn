@@ -5,14 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://2cwm2bfq28ii" path="res://assets/TD Tiles/towerDefense_tile275.png" id="3_g3kca"]
 
 [node name="red_tower_panel" type="Panel"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(160, 160)
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_b5m71")
 
 [node name="Asset-1" type="Sprite2D" parent="."]
-position = Vector2(35, 39)
-scale = Vector2(0.15, 0.15)
+position = Vector2(74, 80)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_murxv")
 
 [node name="TowerDefenseTile275" type="Sprite2D" parent="Asset-1"]
