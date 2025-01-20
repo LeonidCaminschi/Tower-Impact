@@ -474,7 +474,7 @@ script = ExtResource("2_il1gc")
 wait_time = 30.0
 autostart = true
 
-[node name="TimeLeft" type="Label" parent="PathSpawner"]
+[node name="Timer2" type="Label" parent="PathSpawner"]
 offset_left = 1216.0
 offset_top = 768.0
 offset_right = 1627.0
