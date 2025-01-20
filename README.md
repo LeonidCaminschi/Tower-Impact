@@ -53,13 +53,22 @@
 * Updated links between screens
 * Dynamic update of the User account (curriencies and new towers(anime waifus))
 
-## 19/01/2025
+## 19/01/2025 - 1 Days before exam
 * Implemented Game Over Screen with posibility of trying again the level or going to the map
 * Updated the Character Selection Screen to only allow to go to the level when you have 4 characters selected
 * Updated the Pull Animation for x1 pull and x10 pull
 * Whenever a new character is gotten through the gatcha mechanic, it's automaticly added to the character selection screen
 
+## 20/01/2025 - 6 hours before exam
+* Implemented more types of enemies
+* Fixed chosen tower images being static
+* Added Tower scene for kazuha
+
 ## Bibliography
 * **[Online Video Course Tutorial](https://www.youtube.com/watch?v=tR_8Ch9aZ_Q&list=PLPuNhh82sRgk7S85quXb2_XI8b_jbmruB)**.
 * **[Free Use Tower Defense Assets](https://www.kenney.nl/assets/tower-defense-top-down)**.
 * **[Stolen Tower Models](https://www.instagram.com/ekasetyanugraha/)**
+* **[Stolen Enemy Models](https://www.redbubble.com/i/notebook/Genshin-Impact-Anemo-Slime-Pixel-Art-by-pixelsinnit/98219218.WX3NH)**
+* **[Stolen Store Background](https://www.deviantart.com/emilylily1423/art/Background-of-Crossover-mart-1052857991)**
+* **[Stolen Gatcha Banner](https://genshin.hoyoverse.com/en/)**
+* **[Generated Images](https://designer.microsoft.com/)**
