@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-@export var speed = 200
-var Health = 10
+@export var speed = 400
+var Health = 5
 
 func _process(delta: float) -> void:
 	get_parent().set_progress(get_parent().get_progress() + speed*delta)
@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 			show_game_over_popup()
 		
 	if Health <= 0:
-		Gvar.Gold += 1
+		Gvar.Gold += 2
 		death()
 		
 func death():

@@ -13,6 +13,11 @@ var SelectTower = Gvar.towerMapper(Gvar.selectedTowers.keys()[0])
 
 var currTile
 
+func _ready() -> void:
+	var asset_node = $Asset
+	var new_texture = load(Gvar.selectedTowers.keys()[0])  # Load the new texture
+	asset_node.texture = new_texture  # Assuming 'Asset-1' is a Sprite or TextureRect
+
 func _on_gui_input(event: InputEvent) -> void:
 	if Gvar.Gold >= 10:
 		var tempTower = tower.instantiate()
@@ -96,17 +101,17 @@ offset_right = 80.0
 offset_bottom = 80.0
 script = SubResource("GDScript_var5s")
 
-[node name="Asset-1" type="Sprite2D" parent="."]
+[node name="Asset" type="Sprite2D" parent="."]
 position = Vector2(72, 64)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_3ffif")
 
-[node name="TowerDefenseTile275" type="Sprite2D" parent="Asset-1"]
+[node name="TowerDefenseTile275" type="Sprite2D" parent="Asset"]
 position = Vector2(233.333, 253.333)
 scale = Vector2(3.85417, 3.95833)
 texture = ExtResource("3_n8d8w")
 
-[node name="Label" type="Label" parent="Asset-1"]
+[node name="Label" type="Label" parent="Asset"]
 offset_left = 100.0
 offset_top = 200.0
 offset_right = 191.0

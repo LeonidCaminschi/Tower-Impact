@@ -10,17 +10,17 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_b5m71")
 
-[node name="Asset-1" type="Sprite2D" parent="."]
+[node name="Asset" type="Sprite2D" parent="."]
 position = Vector2(74, 80)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_murxv")
 
-[node name="TowerDefenseTile275" type="Sprite2D" parent="Asset-1"]
+[node name="TowerDefenseTile275" type="Sprite2D" parent="Asset"]
 position = Vector2(246.667, 213.333)
 scale = Vector2(3.85417, 3.95833)
 texture = ExtResource("3_g3kca")
 
-[node name="Label" type="Label" parent="Asset-1"]
+[node name="Label" type="Label" parent="Asset"]
 offset_left = 113.333
 offset_top = 160.0
 offset_right = 204.333

@@ -93,17 +93,17 @@ offset_right = 160.0
 offset_bottom = 160.0
 script = SubResource("GDScript_var5s")
 
-[node name="Asset-1" type="Sprite2D" parent="."]
+[node name="Asset" type="Sprite2D" parent="."]
 position = Vector2(80, 72)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_lbnlm")
 
-[node name="TowerDefenseTile275" type="Sprite2D" parent="Asset-1"]
+[node name="TowerDefenseTile275" type="Sprite2D" parent="Asset"]
 position = Vector2(233.333, 253.333)
 scale = Vector2(3.85417, 3.95833)
 texture = ExtResource("3_446wy")
 
-[node name="Label" type="Label" parent="Asset-1"]
+[node name="Label" type="Label" parent="Asset"]
 offset_left = 100.0
 offset_top = 200.0
 offset_right = 191.0

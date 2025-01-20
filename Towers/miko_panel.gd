@@ -5,6 +5,11 @@ var SelectTower = Gvar.towerMapper(Gvar.selectedTowers.keys()[3])
 @onready var tower = load(SelectTower)
 var currTile
 
+func _ready() -> void:
+	var asset_node = $Asset
+	var new_texture = load(Gvar.selectedTowers.keys()[3])  # Load the new texture
+	asset_node.texture = new_texture  # Assuming 'Asset-1' is a Sprite or TextureRect
+
 func _on_gui_input(event: InputEvent) -> void:
 	if Gvar.Gold >= 10:
 		var tempTower = tower.instantiate()

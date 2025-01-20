@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkr8hnm6hvaar"]
+[gd_scene load_steps=7 format=3 uid="uid://cw3t2k0ragjjo"]
 
-[ext_resource type="Script" path="res://Mobs/soldier_a.gd" id="1_h5kh3"]
-[ext_resource type="Texture2D" uid="uid://c8mok2c0yvm3u" path="res://assets/towers/Asset-enemy.png" id="2_2bcm8"]
+[ext_resource type="Script" path="res://Mobs/soldier_b.gd" id="1_qfvri"]
+[ext_resource type="Texture2D" uid="uid://bwl5i8xpvo2x3" path="res://assets/towers/173733829054854938.png" id="2_8kh4c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0g6vs"]
 bg_color = Color(1, 0, 0, 1)
@@ -23,7 +23,7 @@ func _process(delta):
 
 [node name="Soldier A" type="CharacterBody2D"]
 scale = Vector2(2, 2)
-script = ExtResource("1_h5kh3")
+script = ExtResource("1_qfvri")
 
 [node name="Node2D" type="Node2D" parent="."]
 top_level = true
@@ -42,7 +42,7 @@ script = SubResource("GDScript_ri5sy")
 
 [node name="TowerDefenseTile245" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_2bcm8")
+texture = ExtResource("2_8kh4c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_cmdhg")

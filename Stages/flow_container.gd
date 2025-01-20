@@ -1,4 +1,4 @@
-extends Sprite2D
+extends FlowContainer
 
 
 # Called when the node enters the scene tree for the first time.
